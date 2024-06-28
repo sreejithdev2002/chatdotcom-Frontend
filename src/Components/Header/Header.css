@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap");
+
+.header {
+  height: 50px;
+  width: auto;
+  background-color: #29392a;
+  color: white;
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerBtn {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.headerBtn h3{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.headerBtn button {
+  margin: 0px 0px 0px 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(213, 0, 0);
+  font-size: 14px;
+}
+
+.headerBtn button:hover {
+  background-color: rgb(170, 2, 2);
+}
