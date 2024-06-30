@@ -1,27 +1,55 @@
-.allChats{
-    margin: 10px 20px;
+.allChats {
+  margin: 10px 20px;
 }
 
-.allChats h2{
-    font-size: 28px;
-    font-weight: 500;
+.allChats h2 {
+  font-size: 28px;
+  font-weight: 500;
 }
 
 .conversation {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 10px 0px;
-    cursor: pointer;
-    width: auto;
+  border: 1px solid #383838;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conversation:hover {
+  background-color: #383838;
 }
 
 .conversation h3 {
-    margin: 0;
-    font-size: 1.2em;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .conversation p {
-    margin: 5px 0 0 0;
-    color: #555;
+  margin: 5px 0 0 0;
+  color: #dddddd;
+  font-size: 14px;
+}
+
+.allChatsImage {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.chatsSec {
+  margin-left: 10px;
+}
+
+.chatLeftSec {
+  display: flex;
+}
+
+.chatRight p {
+    margin: 12px 0px;
+  color: #1daa61;
 }
