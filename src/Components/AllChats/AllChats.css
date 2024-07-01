@@ -1,5 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap");
+
+
+.chat{
+  display: flex;
+
+}
+
 .allChats {
-  margin: 10px 20px;
+  margin: 50px 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  max-width: 30vw;
+  border-right: 1px solid rgb(89, 89, 89);
+}
+
+.singleChat {
+  width: 70vw;
+  background-color: #292929;
+  height: 85vh;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  margin-right: 10px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.singleChat h1{
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.singleChat p{
+  font-size: 12px;
+  color: rgb(223, 223, 223);
+  position: relative;
+  top: -20px;
+  letter-spacing: 0.5px;
 }
 
 .allChats h2 {
