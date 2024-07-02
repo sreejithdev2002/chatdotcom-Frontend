@@ -38,6 +38,7 @@ const mockConversations = [
 
 function AllChats() {
   const [conversations] = useState(mockConversations);
+  const [noMessage, setNoMessage] = useState(false);
 
   if (conversations.length === 0)
     return (
@@ -71,8 +72,55 @@ function AllChats() {
         </div>
       </div>
       <div className="singleChat">
-        <h1>Chat.com</h1>
-        <p>Click on a chat to make a conversation.</p>
+        {noMessage ? (
+          <div className="noMessage">
+            <h1>Chat.com</h1>
+            <p>Click on a chat to make a conversation.</p>
+          </div>
+        ) : (
+          <>
+            <div className="messageHeader">
+              <div className="messageHeaderLeft">
+                <img src={SampleImage} alt="Sreejith" />
+                <div className="messageHeaderLeftName">
+                  <h3>Sreejith</h3>
+                  <p>Online</p>
+                </div>
+              </div>
+              <div className="messageHeaderRight"></div>
+            </div>
+            <div className="messageChats">
+              <p>Helllo</p>
+              <p>How Are You</p>
+              <p>I Am Fine</p>
+              <p>How About You</p>
+              <p>I Am Fine, Thanks</p>
+              <p>Helllo</p>
+              <p>How Are You</p>
+              <p>I Am Fine</p>
+              <p>How About You</p>
+              <p>I Am Fine, Thanks</p>
+              <p>Helllo</p>
+              <p>How Are You</p>
+              <p>I Am Fine</p>
+              <p>How About You</p>
+              <p>I Am Fine, Thanks</p>
+              <p>Helllo</p>
+              <p>How Are You</p>
+              <p>I Am Fine</p>
+              <p>How About You</p>
+              <p>I Am Fine, Thanks</p>
+              <p>Helllo</p>
+              <p>How Are You</p>
+              <p>I Am Fine</p>
+              <p>How About You</p>
+              <p>I Am Fine, Thanks</p>
+            </div>
+            <div className="messageInput">
+              <input type="text" placeholder="Send a message..." />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

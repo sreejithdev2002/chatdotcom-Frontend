@@ -12,7 +12,7 @@
   padding-bottom: 30px;
   padding-right: 20px;
   max-width: 30vw;
-  border-right: 1px solid rgb(89, 89, 89);
+  /* border-right: 1px solid rgb(89, 89, 89); */
 }
 
 .singleChat {
@@ -30,15 +30,17 @@
   flex-direction: column;
 }
 
-.singleChat h1{
+.noMessage h1{
   font-family: "Playwrite US Trad", cursive;
   font-size: 32px;
   font-weight: 400;
+  color: #b4b4b4;
+  text-align: center;
 }
 
-.singleChat p{
+.noMessage p{
   font-size: 12px;
-  color: rgb(223, 223, 223);
+  color: #c2c2c2;
   position: relative;
   top: -20px;
   letter-spacing: 0.5px;
@@ -95,3 +97,90 @@
     margin: 12px 0px;
   color: #1daa61;
 }
+
+.messageHeader{
+  background-color: #10492c;
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  top: 0px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.messageHeaderLeft{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 0px 10px;
+}
+
+.messageHeaderLeftName{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.messageHeaderLeftName h3{
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  font-weight: 400;
+}
+
+.messageHeaderLeftName p{
+  font-size: 12px;
+  position: relative;
+  top: -18px;
+  color: #e1e1e1;
+}
+
+.messageHeaderLeft img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.messageChats{
+  /* background-color: thistle; */
+  max-height: 68vh;
+  position: absolute;
+  top: 77.5px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.messageChats p{
+  margin: 10px;
+  padding: 10px;
+  background-color: #18442e;
+  width: 20vw;
+  border-radius: 0px 100px 100px 100px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.messageInput{
+  height: 7vh;
+  background-color: #10492c;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.messageInput input{
+  width: 70%;
+  height: 30px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(115, 115, 115);
+  padding: 0px 5px;
+}
+

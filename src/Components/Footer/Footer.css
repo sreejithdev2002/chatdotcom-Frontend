@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #292929;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.footer p{
+    font-size: 12px;
+    color: #1daa61;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
