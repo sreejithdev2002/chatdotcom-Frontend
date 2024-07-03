@@ -1,0 +1,21 @@
+.newChat{
+    position: fixed;
+    bottom: 10vh;
+    left: 2vw;
+}
+
+.newChatBtn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 28px;
+    background-color: #128c4b;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 9px 1px #00000075;
+}
+
+.newChatBtn:hover{
+    background-color: #136e3e;
+}

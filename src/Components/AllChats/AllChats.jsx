@@ -93,7 +93,7 @@ function AllChats() {
               <p>Helllo</p>
               <p>How Are You</p>
               <p>I Am Fine</p>
-              <p>How About You</p>
+              <p>How About You.</p>
               <p>I Am Fine, Thanks</p>
               <p>Helllo</p>
               <p>How Are You</p>
@@ -117,7 +117,7 @@ function AllChats() {
               <p>I Am Fine, Thanks</p>
             </div>
             <div className="messageInput">
-              <input type="text" placeholder="Send a message..." />
+              <input type="text" placeholder="Type a message" />
             </div>
           </>
         )}
