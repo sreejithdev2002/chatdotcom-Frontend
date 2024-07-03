@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './SearchWindow.css';
 
 function SearchWindow({ onClose }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="searchUserWindow">

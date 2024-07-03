@@ -6,13 +6,35 @@
 
 }
 
+
 .allChats {
-  margin: 50px 20px;
+  position: absolute;
+  margin: 20px 20px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 20px;
   max-width: 30vw;
-  /* border-right: 1px solid rgb(89, 89, 89); */
+  max-height: 80vh;
+}
+
+.chatsonly::-webkit-scrollbar {
+  width: 3px;
+}
+
+.chatsonly::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.chatsonly::-webkit-scrollbar-thumb{
+  background: rgb(127, 127, 127);
+  border-radius: 5px;
+}
+
+.chatsonly{
+  position: relative;
+  overflow-y: auto;
+  max-height: 75vh;
+  scroll-behavior: smooth;
 }
 
 .singleChat {
@@ -149,13 +171,27 @@
   border-radius: 50%;
 }
 
-.messageChats{
-  /* background-color: thistle; */
+.messageChats::-webkit-scrollbar {
+  width: 3px;
+}
+
+.messageChats::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.messageChats::-webkit-scrollbar-thumb{
+  background: rgb(127, 127, 127);
+  border-radius: 5px;
+}
+
+.messageChats {
   max-height: 68vh;
   position: absolute;
   top: 77.5px;
   width: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
+
 }
 
 .messageChats p {

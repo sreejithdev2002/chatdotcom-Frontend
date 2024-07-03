@@ -50,7 +50,7 @@ function AllChats() {
     <div className="chat">
       <div className="allChats">
         <h2>Chats</h2>
-        <div>
+        <div className="chatsonly">
           {conversations.map((conversation) => (
             <div key={conversation.id} className="conversation">
               <div className="chatLeftSec">
