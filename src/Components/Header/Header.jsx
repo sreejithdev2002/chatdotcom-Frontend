@@ -4,7 +4,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase"; // Adjust the import path as needed
 import "./Header.css";
-import SampleImage from '../../Assets/Images/sreejith.jpg';
+import SampleImage from '../../Assets/Images/placeholder.png';
 
 function Header() {
   const [userName, setUserName] = useState("");

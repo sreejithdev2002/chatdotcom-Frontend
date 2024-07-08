@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AllChats.css";
-import SampleImage from "../../Assets/Images/sreejith.jpg";
+import SampleImage from "../../Assets/Images/placeholder.png";
+import { SendIcon } from "../../Assets/Icons";
 
 const mockConversations = [
   { id: 1, name: "Alice", lastMessage: "Hey, how are you?", number: 2 },
@@ -46,6 +47,10 @@ function AllChats() {
         <h1>Empty Chats</h1>
       </div>
     );
+
+  const handleClick = () => {
+    alert("Test Send Message");
+  };
   return (
     <div className="chat">
       <div className="allChats">
@@ -94,30 +99,12 @@ function AllChats() {
               <p>How Are You</p>
               <p>I Am Fine</p>
               <p>How About You.</p>
-              <p>I Am Fine, Thanks</p>
-              <p>Helllo</p>
-              <p>How Are You</p>
-              <p>I Am Fine</p>
-              <p>How About You</p>
-              <p>I Am Fine, Thanks</p>
-              <p>Helllo</p>
-              <p>How Are You</p>
-              <p>I Am Fine</p>
-              <p>How About You</p>
-              <p>I Am Fine, Thanks</p>
-              <p>Helllo</p>
-              <p>How Are You</p>
-              <p>I Am Fine</p>
-              <p>How About You</p>
-              <p>I Am Fine, Thanks</p>
-              <p>Helllo</p>
-              <p>How Are You</p>
-              <p>I Am Fine</p>
-              <p>How About You</p>
-              <p>I Am Fine, Thanks</p>
             </div>
             <div className="messageInput">
               <input type="text" placeholder="Type a message" />
+              <div onClick={handleClick}>
+                <SendIcon />
+              </div>
             </div>
           </>
         )}

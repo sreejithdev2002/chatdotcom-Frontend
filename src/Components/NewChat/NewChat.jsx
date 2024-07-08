@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./NewChat.css";
 import SearchWindow from "../SearchWindow/SearchWindow";
+import { PlusIcon } from "../../Assets/Icons";
 
 function NewChat() {
 
@@ -13,7 +14,7 @@ function NewChat() {
   return (
     <div className="newChat">
       <button className="newChatBtn" onClick={toggleSearchWindow}>
-        +
+        <PlusIcon/>
       </button>
       {searchWindow && <SearchWindow onClose={toggleSearchWindow}/>}
     </div>

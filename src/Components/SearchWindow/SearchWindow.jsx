@@ -1,42 +1,8 @@
-// import React, { useState } from "react";
-// import './SearchWindow.css';
-
-// function SearchWindow({ onClose }) {
-//   // const [searchTerm, setSearchTerm] = useState("");
-
-//   return (
-//     <div className="searchUserWindow">
-//       <div className="searchUserWindowContent">
-//         <button className="closeBtn" onClick={onClose}>
-//           X
-//         </button>
-//         <label>Search User</label>
-//         <input
-//           type="text"
-//           placeholder="Search number"
-//           //   value={searchTerm}
-//           //   onChange={handleSearchChange}
-//         />
-//         <button
-//         id="searchUserSearchBtn"
-//         // onClick={handleSearch}
-//         >
-//           Search
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default SearchWindow;
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase"; // Adjust the import path as needed
-import './SearchWindow.css';
+import "./SearchWindow.css";
+import { CloseIcon } from "../../Assets/Icons";
 
 function SearchWindow({ onClose }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -52,7 +18,10 @@ function SearchWindow({ onClose }) {
 
       try {
         const usersRef = collection(db, "users");
-        const q = query(usersRef, where("phoneNumber", "==", trimmedSearchTerm));
+        const q = query(
+          usersRef,
+          where("phoneNumber", "==", trimmedSearchTerm)
+        );
         const querySnapshot = await getDocs(q);
 
         const results = [];
@@ -77,7 +46,7 @@ function SearchWindow({ onClose }) {
     <div className="searchUserWindow">
       <div className="searchUserWindowContent">
         <button className="closeBtn" onClick={onClose}>
-          X
+          <CloseIcon/>
         </button>
         <label>Search User by Phone Number</label>
         <input

@@ -64,3 +64,25 @@
 #searchUserSearchBtn:hover{
     background-color: rgb(7, 94, 7);
 }
+
+.searchResults ul{
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.searchResults ul li:hover {
+    background-color: #2f2f2f;
+    border: 1px solid green;
+}
+.searchResults ul li {
+    list-style: none;
+    border: 1px solid #1d611db0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    width: 30vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
