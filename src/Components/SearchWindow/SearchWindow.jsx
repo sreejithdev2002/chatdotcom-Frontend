@@ -31,6 +31,8 @@
 // export default SearchWindow;
 
 
+
+
 import React, { useState, useEffect } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase"; // Adjust the import path as needed
@@ -42,14 +44,15 @@ function SearchWindow({ onClose }) {
 
   useEffect(() => {
     const searchUsers = async () => {
-      if (searchTerm.trim() === "") {
+      const trimmedSearchTerm = searchTerm.trim();
+      if (trimmedSearchTerm === "") {
         setSearchResults([]);
         return;
       }
 
       try {
         const usersRef = collection(db, "users");
-        const q = query(usersRef, where("phoneNumber", "==", searchTerm));
+        const q = query(usersRef, where("phoneNumber", "==", trimmedSearchTerm));
         const querySnapshot = await getDocs(q);
 
         const results = [];
@@ -104,4 +107,3 @@ function SearchWindow({ onClose }) {
 }
 
 export default SearchWindow;
-
