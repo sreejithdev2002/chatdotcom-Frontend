@@ -30,11 +30,12 @@
   border-radius: 5px;
 }
 
-.chatsonly{
+.chatsonly {
   position: relative;
   overflow-y: auto;
   max-height: 75vh;
   scroll-behavior: smooth;
+  padding-right: 10px;
 }
 
 .singleChat {
@@ -195,11 +196,12 @@
 }
 
 .messageChats p {
-  margin: 20px 10px;
-  padding: 10px;
+  margin: 10px 10px;
+  padding: 10px 15px;
   background-color: #353535;
+  min-width: 10vw;
   max-width: 20vw;
-  border-radius: 0px 25px 25px 25px;
+  min-height: 2vw;
   height: auto;
   font-size: 12px;
 }
@@ -231,3 +233,18 @@
   font-size: 12px;
 }
 
+.sentMessage, .receivedMessage{
+  display: flex;
+}
+
+.sentMessage p {
+  background-color: #005c4b;
+  position: relative;
+  border-radius: 25px 0px 25px 25px;
+  left: 57vw;
+}
+
+.receivedMessage p{
+  background-color: #2e2e2e;
+  border-radius: 0px 25px 25px 25px;
+}

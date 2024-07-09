@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { db } from "../../firebase"; // Adjust the import path as needed
+import { db } from "../../firebase";
 import "./SearchWindow.css";
 import { CloseIcon } from "../../Assets/Icons";
+import { useNavigate } from "react-router-dom";
 
-function SearchWindow({ onClose }) {
+function SearchWindow() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const searchUsers = async () => {
@@ -37,16 +39,24 @@ function SearchWindow({ onClose }) {
 
     const timeoutId = setTimeout(() => {
       searchUsers();
-    }, 300); // Delay in milliseconds before triggering search (e.g., 300ms)
+    }, 300);
 
     return () => clearTimeout(timeoutId);
   }, [searchTerm]);
+
+  const handleUserSelect = (user) => {
+    navigate("/home", { state: { selectedUser: user } });
+  };
+
+  const onClose = () => {
+    navigate("/home");
+  };
 
   return (
     <div className="searchUserWindow">
       <div className="searchUserWindowContent">
         <button className="closeBtn" onClick={onClose}>
-          <CloseIcon/>
+          <CloseIcon />
         </button>
         <label>Search User by Phone Number</label>
         <input
@@ -59,10 +69,9 @@ function SearchWindow({ onClose }) {
           <ul>
             {searchResults.length > 0 ? (
               searchResults.map((user) => (
-                <li key={user.id}>
+                <li key={user.id} onClick={() => handleUserSelect(user)}>
                   <p>{user.username}</p>
                   <p>{user.phoneNumber}</p>
-                  {/* Add additional details you want to display */}
                 </li>
               ))
             ) : (
