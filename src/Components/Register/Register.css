@@ -56,6 +56,9 @@
   margin-top: 5px;
   border-radius: 4px;
   border: none;
+  background-color: #2b2b2b;
+  color: white;
+  outline: none;
 }
 
 .registerInput button {
